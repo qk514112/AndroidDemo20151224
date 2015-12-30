@@ -20,7 +20,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        TextView tv = (TextView)getActivity().findViewById(R.id.text_view);
+        TextView tv = (TextView)getActivity().findViewById(R.id.home_text_view);
         tv.setText("home page");
     }
 }

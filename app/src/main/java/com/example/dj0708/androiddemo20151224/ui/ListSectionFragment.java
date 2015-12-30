@@ -22,7 +22,7 @@ public class ListSectionFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        TextView tv = (TextView)getActivity().findViewById(R.id.text_view);
+        TextView tv = (TextView)getActivity().findViewById(R.id.list_section_text_view);
         tv.setText("ListSection");
     }
 }

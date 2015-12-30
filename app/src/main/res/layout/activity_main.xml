@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
     >
 
@@ -13,10 +13,10 @@
         android:layout_weight="1"
         />
 
-    <android.support.v4.app.FragmentTabHost
+    <com.example.dj0708.androiddemo20151224.custom.CustomFragmentTabHost
         android:id="@+id/tab_host"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         >
 
         <FrameLayout
@@ -25,6 +25,6 @@
             android:layout_height="0dip"
             android:layout_weight="0"
             />
-    </android.support.v4.app.FragmentTabHost>
+    </com.example.dj0708.androiddemo20151224.custom.CustomFragmentTabHost>
 
 </LinearLayout>
