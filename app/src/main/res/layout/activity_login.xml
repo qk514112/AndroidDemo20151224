@@ -65,4 +65,14 @@
         android:text="@string/login_btn_title"
         android:textColor="#ffffff"
         android:textSize="18.0sp" />
+
+    <EditText
+        android:id="@+id/responseEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginTop="20.0dip"
+        android:textColorHint="#999999"
+        android:textSize="16.0sp"
+        android:inputType="text"
+        android:hint="请求结果"/>
 </LinearLayout>
