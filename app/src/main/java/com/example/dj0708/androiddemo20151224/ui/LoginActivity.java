@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -100,7 +101,7 @@ public class LoginActivity extends Activity {
         passwordEditText = (EditText)findViewById(R.id.passwordEditText);
         responseEditText = (EditText)findViewById(R.id.responseEditText);
         loginBtn = (Button)findViewById(R.id.loginBtn);
-        new Thread(requestLoginRunable).start();
+        addLoginButtonListener();
     }
 
     /**
@@ -111,4 +112,26 @@ public class LoginActivity extends Activity {
      * @userName not null;
      * @passWord not null;
      */
+
+    /**
+     * touch login button checking user name and password;
+     * if user name is null notice to input user name;
+     * if password is null notice to input password;
+     * if all have values login with the user name and password;
+     */
+
+    private void addLoginButtonListener() {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (userNameEditText.getText().toString().equals("")) {
+                    Toast.makeText(getApplicationContext(), "please enter user name", Toast.LENGTH_LONG).show();
+                } else if (passwordEditText.getText().toString().equals("")) {
+                    Toast.makeText(getApplicationContext(), "please enter password", Toast.LENGTH_LONG).show();
+                } else {
+                    new Thread(requestLoginRunable).start();
+                }
+            }
+        });
+    }
 }
